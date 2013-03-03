@@ -2,8 +2,61 @@
 <html>
   <head>
     <title>Wedding Website</title>
+    <link href='http://fonts.googleapis.com/css?family=Amatic+SC:700' rel='stylesheet' type='text/css'>
+    <link href="css/reset.css" rel="stylesheet" type="text/css" >
+    <link href="css/style.css" rel="stylesheet" type="text/css" >
   </head>
   <body>
-    <h1>Wedding Website</h1>
+    <!-- fixed header at top of page -->
+    <header>
+      <a class="story" href="#story">Story</a>
+      <a class="people" href="#people">People</a>
+      <a class="event" href="#event">Event</a>
+      <a class="gifts" href="#gifts">Gifts</a>
+      <a class="rsvp" href="#rsvp">RSVP</a>
+    </header>
+
+    <section id="content">
+
+      <section class="story">
+        <a class="anchor" name="story"></a>
+        <h1>Kristen &amp; Jason</h1>
+        <div id="carousel">
+          <ul class="index-picker"></ul>
+          <div class="scroller">
+            <div class="carousel-image image-0"></div>
+            <div class="carousel-image image-1"></div>
+            <div class="carousel-image image-2"></div>
+            <div class="carousel-image image-3"></div>
+            <div class="carousel-image image-4"></div>
+            <div class="carousel-image image-5"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="people">
+        <a class="anchor" name="people"></a>
+        <h2>People</h2>
+      </section>
+
+      <section class="event">
+        <a class="anchor" name="event"></a>
+        <h2>Event</h2>
+      </section>
+
+      <section class="gifts">
+        <a class="anchor" name="gifts"></a>
+        <h2>Gifts</h2>
+      </section>
+
+      <section class="rsvp">
+        <a class="anchor" name="rsvp"></a>
+        <h2>RSVP</h2>
+      </section>
+
+    </section>
+
+    <script type="application/javascript" src="js/require.js"></script>
+    <script type="application/javascript" src="js/require.config.js"></script>
   </body>
 </html>
