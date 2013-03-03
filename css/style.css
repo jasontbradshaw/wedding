@@ -69,7 +69,7 @@ header {
   user-select: none;
   z-index: 1000;
 }
-header a {
+header .header-link {
   display: inline-block;
   font-family: 'Amatic SC', 'Times New Roman', serif;
   font-size: 30px;
@@ -89,28 +89,28 @@ header a {
   -ms-transition-duration: 150ms;
   transition-duration: 150ms;
 }
-header a:hover,
-header a:active,
-header a:visited {
+header .header-link:hover,
+header .header-link:active,
+header .header-link:visited {
   color: #000;
   text-decoration: none;
 }
-header a:hover {
+header .header-link:hover {
   color: rgba(0,0,0,0.7);
 }
-header a:hover.story {
+header .header-link:hover.story {
   background-color: #fddfbc;
 }
-header a:hover.people {
+header .header-link:hover.people {
   background-color: #dcd9ff;
 }
-header a:hover.event {
+header .header-link:hover.event {
   background-color: #ffd6d6;
 }
-header a:hover.gifts {
+header .header-link:hover.gifts {
   background-color: #dde3c3;
 }
-header a:hover.rsvp {
+header .header-link:hover.rsvp {
   background-color: #fffcde;
 }
 #carousel {
