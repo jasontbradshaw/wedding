@@ -1,0 +1,258 @@
+@font-face {
+  font-family: 'Libertine';
+  src: url("../fonts/linlibertine_rah.eot");
+  src: url("../fonts/linlibertine_rah.eot?#iefix") format('embedded-opentype'), url("../fonts/linlibertine_rah.woff") format('woff'), url("../fonts/linlibertine_rah.ttf") format('truetype'), url("../fonts/linlibertine_rah.svg#linux_libertineregular") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Libertine';
+  src: url("../fonts/linlibertine_rbah.eot");
+  src: url("../fonts/linlibertine_rbah.eot?#iefix") format('embedded-opentype'), url("../fonts/linlibertine_rbah.woff") format('woff'), url("../fonts/linlibertine_rbah.ttf") format('truetype'), url("../fonts/linlibertine_rbah.svg#linux_libertinebold") format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Libertine';
+  src: url("../fonts/linlibertine_rbiah.eot");
+  src: url("../fonts/linlibertine_rbiah.eot?#iefix") format('embedded-opentype'), url("../fonts/linlibertine_rbiah.woff") format('woff'), url("../fonts/linlibertine_rbiah.ttf") format('truetype'), url("../fonts/linlibertine_rbiah.svg#linux_libertinebold_italic") format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Libertine';
+  src: url("../fonts/linlibertine_riah.eot");
+  src: url("../fonts/linlibertine_riah.eot?#iefix") format('embedded-opentype'), url("../fonts/linlibertine_riah.woff") format('woff'), url("../fonts/linlibertine_riah.ttf") format('truetype'), url("../fonts/linlibertine_riah.svg#linux_libertineitalic") format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+body {
+  background-image: url("../img/linen.jpg");
+  font-family: 'Libertine', 'Times New Roman', serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Amatic SC', 'Times New Roman', serif;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5em;
+  padding: 0.1em;
+  border-top: 10px solid #f0f0f0;
+  border-bottom: 10px solid #f0f0f0;
+  width: 150%;
+  margin-left: -25%;
+  color: #000;
+  color: rgba(0,0,0,0.6);
+}
+h1 {
+  font-size: 75px;
+}
+h2 {
+  font-size: 50px;
+}
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 1000;
+}
+header a {
+  display: inline-block;
+  font-family: 'Amatic SC', 'Times New Roman', serif;
+  font-size: 30px;
+  color: #000;
+  text-decoration: none;
+  line-height: 45px;
+  padding-left: 1em;
+  padding-right: 1em;
+  -webkit-transition-property: background-color, color;
+  -moz-transition-property: background-color, color;
+  -o-transition-property: background-color, color;
+  -ms-transition-property: background-color, color;
+  transition-property: background-color, color;
+  -webkit-transition-duration: 150ms;
+  -moz-transition-duration: 150ms;
+  -o-transition-duration: 150ms;
+  -ms-transition-duration: 150ms;
+  transition-duration: 150ms;
+}
+header a:hover,
+header a:active,
+header a:visited {
+  color: #000;
+  text-decoration: none;
+}
+header a:hover {
+  color: rgba(0,0,0,0.7);
+}
+header a:hover.story {
+  background-color: #fddfbc;
+}
+header a:hover.people {
+  background-color: #dcd9ff;
+}
+header a:hover.event {
+  background-color: #ffd6d6;
+}
+header a:hover.gifts {
+  background-color: #dde3c3;
+}
+header a:hover.rsvp {
+  background-color: #fffcde;
+}
+#carousel {
+  position: relative;
+  overflow: hidden;
+  width: 860px;
+  height: 500px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #f0f0f0;
+  background-color: #f0f0f0;
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  zoom: 1;
+}
+#carousel:before,
+#carousel:after {
+  content: "";
+  display: table;
+}
+#carousel:after {
+  clear: both;
+}
+#carousel .scroller {
+  height: 100%;
+  width: 2580px;
+  -webkit-transition: margin-left 1s;
+  -moz-transition: margin-left 1s;
+  -o-transition: margin-left 1s;
+  -ms-transition: margin-left 1s;
+  transition: margin-left 1s;
+}
+#carousel:hover .index-picker {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+.index-picker {
+  opacity: 0;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 300ms;
+  -moz-transition: opacity 300ms;
+  -o-transition: opacity 300ms;
+  -ms-transition: opacity 300ms;
+  transition: opacity 300ms;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5%;
+  text-align: center;
+}
+.index-picker li {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  background-color: #fff;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-right: 20px;
+  border: 1px solid rgba(68,68,68,0.5);
+  -webkit-transition-property: border, background-color;
+  -moz-transition-property: border, background-color;
+  -o-transition-property: border, background-color;
+  -ms-transition-property: border, background-color;
+  transition-property: border, background-color;
+  -webkit-transition-duration: 300ms;
+  -moz-transition-duration: 300ms;
+  -o-transition-duration: 300ms;
+  -ms-transition-duration: 300ms;
+  transition-duration: 300ms;
+}
+.index-picker li.selected {
+  background-color: #faae58;
+  border: 1px solid rgba(98,54,3,0.5);
+}
+.carousel-image {
+  width: 880px;
+  height: 100%;
+  float: left;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+.carousel-image.image-0 {
+  background-image: url("http://placekitten.com/880/500");
+}
+.carousel-image.image-1 {
+  background-image: url("http://placekitten.com/881/500");
+}
+.carousel-image.image-2 {
+  background-image: url("http://placekitten.com/882/500");
+}
+.carousel-image.image-3 {
+  background-image: url("http://placekitten.com/883/500");
+}
+.carousel-image.image-4 {
+  background-image: url("http://placekitten.com/884/500");
+}
+.carousel-image.image-5 {
+  background-image: url("http://placekitten.com/886/500");
+}
+#content {
+  width: 960px;
+  padding-top: 45px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 80px;
+}
+#content > section {
+  position: relative;
+  overflow: hidden;
+  width: 880px;
+  padding: 40px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  margin-top: 40px;
+RSVP
+}
+#content > section .anchor {
+  visibility: hidden;
+  position: absolute;
+  top: -85px;
+}
+#content > section.story h1 {
+  background-color: #faae58;
+}
+#content > section.people h2 {
+  background-color: #a89fff;
+}
+#content > section.event h2 {
+  background-color: #f99;
+}
+#content > section.gifts h2 {
+  background-color: #abb868;
+}
+#content > section.rsvp h2 {
+  background-color: #fff8ac;
+}
