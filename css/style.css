@@ -29,6 +29,7 @@
 body {
   background-image: url("../img/linen.jpg");
   font-family: 'Libertine', 'Times New Roman', serif;
+  -webkit-font-smoothing: antialiased;
 }
 h1,
 h2,
