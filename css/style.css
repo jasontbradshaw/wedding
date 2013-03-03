@@ -115,6 +115,11 @@ header .header-link:hover.rsvp {
 }
 #carousel {
   zoom: 1;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
   position: relative;
   overflow: hidden;
   width: 860px;
