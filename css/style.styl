@@ -1,0 +1,224 @@
+@import 'nib'
+@import 'fonts'
+
+$font-fancy = 'Amatic SC', 'Times New Roman', serif
+$font-normal = 'Libertine', 'Times New Roman', serif
+
+$color-light = #e5f7d1
+$color-medium-light = #e8e0a1
+$color-medium = #abb868
+$color-medium-dark = #6c804b
+$color-dark = #faae58
+
+$color-story = $color-dark
+$color-people = #a89fff
+$color-event = #ff9999
+$color-gifts = $color-medium
+$color-rsvp = #fff8ac
+
+$color-header-border = #f0f0f0
+
+$size-header-height = 45px
+$size-content-padding = 40px
+$size-content-width = 960px
+
+body
+  background-image url(../img/linen.jpg)
+  font-family $font-normal
+
+h1, h2, h3, h4, h5, h6
+  font-family $font-fancy
+  font-weight 700
+  text-align center
+
+  margin-bottom 0.5em
+  padding 0.1em
+
+  border-top 10px solid $color-header-border
+  border-bottom @border-top
+
+  width 150%
+  margin-left -25%
+
+  color black
+  color rgba(black, 0.6)
+
+h1
+  font-size 75px
+
+h2
+  font-size 50px
+
+// navigation
+header
+  position fixed
+  top 0
+  right 0
+  left 0
+
+  text-align center
+
+  background-color white
+  box-shadow 0 0 10px rgba(black, 0.5)
+  user-select none
+
+  z-index 1000
+
+  a
+    display inline-block
+
+    font-family $font-fancy
+    font-size 30px
+    color black
+    text-decoration none
+
+    line-height $size-header-height
+    padding-left 1em
+    padding-right @padding-left
+
+    transition-property background-color, color
+    transition-duration 150ms
+
+    &:hover
+    &:active
+    &:visited
+      color @color
+      text-decoration @text-decoration
+
+    &:hover
+      color rgba(@color, 0.7)
+
+      &.story
+        background-color lighten($color-story, 60%)
+      &.people
+        background-color lighten($color-people, 60%)
+      &.event
+        background-color lighten($color-event, 60%)
+      &.gifts
+        background-color lighten($color-gifts, 60%)
+      &.rsvp
+        background-color lighten($color-rsvp, 60%)
+
+#carousel
+  position relative
+  overflow hidden
+
+  width $size-content-width - (2 * ($size-content-padding + 10px))
+  height 500px
+
+  border-width 10px
+  border-style solid
+  border-color $color-header-border
+  background-color @border-color
+
+  box-shadow 0 0 10px rgba(black, 0.5)
+
+  clearfix()
+
+  .scroller
+    height 100%
+    width @width * 3 // number if images in the scroller
+
+    transition margin-left 1s
+
+  &:hover .index-picker
+    opacity 1
+
+.index-picker
+  opacity 0
+  transition opacity 300ms
+
+  position absolute
+  left 0
+  right 0
+  bottom 5%
+
+  text-align center
+
+  li
+    display inline-block
+    width 20px
+    height @width
+    border-radius @width
+    background-color white
+
+    cursor pointer
+
+    margin-left @width
+    margin-right @margin-left
+
+    border 1px solid rgba(#444444, 0.5)
+
+    transition-property border, background-color
+    transition-duration 300ms
+
+    &.selected
+      background-color $color-dark
+      border 1px solid rgba(darken($color-dark, 70%), 0.5)
+
+
+.carousel-image
+  width $size-content-width - ($size-content-padding * 2)
+  height 100%
+
+  float left
+
+  background-size cover
+  background-position center
+
+// individual carousel images
+.carousel-image.image-0
+  background-image url(http://placekitten.com/880/500)
+.carousel-image.image-1
+  background-image url(http://placekitten.com/881/500)
+.carousel-image.image-2
+  background-image url(http://placekitten.com/882/500)
+.carousel-image.image-3
+  background-image url(http://placekitten.com/883/500)
+.carousel-image.image-4
+  background-image url(http://placekitten.com/884/500)
+.carousel-image.image-5
+  background-image url(http://placekitten.com/886/500)
+
+// information
+#content
+  width $size-content-width
+  padding-top $size-header-height
+
+  margin-left auto
+  margin-right auto
+
+  padding-bottom $size-content-padding * 2
+
+  > section
+    position relative
+    overflow hidden
+
+    width $size-content-width - (2 * $size-content-padding)
+    padding $size-content-padding
+
+    background-color white
+    box-shadow 0 0 20px rgba(black, 0.5)
+
+    border-radius 2px
+
+    margin-top 40px
+    RSVP
+    // move anchor tags up so scrolling goes to a nice position
+    .anchor
+      visibility hidden
+      position absolute
+      top -($size-header-height + $size-content-padding)
+
+    // color headers differently
+    &.story h1
+      background-color $color-story
+    &.people h2
+      background-color $color-people
+    &.event h2
+      background-color $color-event
+    &.gifts h2
+      background-color $color-gifts
+    &.rsvp h2
+      background-color $color-rsvp
+
