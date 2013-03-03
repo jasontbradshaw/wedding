@@ -1,5 +1,5 @@
 require.config({
-  baseUrl: 'assets/js',
+  baseUrl: 'js',
   paths: {
     jquery: '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min'
   },
