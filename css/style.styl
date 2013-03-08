@@ -63,8 +63,6 @@ header
   box-shadow 0 0 10px rgba(black, 0.5)
   user-select none
 
-  z-index 2
-
   .header-link
     display inline-block
 
@@ -102,37 +100,6 @@ header
         background-color lighten($color-gifts, 60%)
       &.rsvp
         background-color lighten($color-rsvp, 60%)
-
-#rsvp-form
-  // below the header
-  z-index 1
-
-  // force 3D acceleration where available
-  transform translateZ(0)
-
-  width 400px
-  height 277px
-
-  background-color white
-  padding 10px
-  padding-top 15px
-
-  border-radius 2px
-  box-shadow 0 0 20px rgba(black, 0.5)
-  transition top 500ms
-
-  position fixed
-  left 51%
-  top -(@height)
-
-  // drawer pull-down effect
-  &.visible
-    top $size-header-height
-
-  // the actual form itself
-  iframe
-    width @width
-    height @height
 
 #carousel
   clearfix()
