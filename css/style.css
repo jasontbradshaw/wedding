@@ -101,7 +101,7 @@ header .header-link:hover {
   color: rgba(0,0,0,0.7);
 }
 header .header-link:hover.story {
-  background-color: #fddfbc;
+  background-color: #ffe5c2;
 }
 header .header-link:hover.people {
   background-color: #fffcde;
@@ -238,7 +238,7 @@ header .header-link:hover.rsvp {
   filter: alpha(opacity=60);
 }
 .thumbnails .carousel-image.selected {
-  border-color: #faae58;
+  border-color: #ffbd66;
   opacity: 1;
   -ms-filter: none;
   filter: none;
@@ -297,7 +297,7 @@ header .header-link:hover.rsvp {
   top: -85px;
 }
 #content > section.story h1 {
-  background-color: #faae58;
+  background-color: #ffbd66;
 }
 #content > section.people h2 {
   background-color: #fff8ac;
