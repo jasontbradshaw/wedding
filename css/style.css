@@ -72,6 +72,7 @@ header {
 }
 header .header-link {
   display: inline-block;
+  margin-left: -0.13333em;
   font-family: 'Amatic SC', 'Times New Roman', serif;
   font-size: 30px;
   color: #000;
