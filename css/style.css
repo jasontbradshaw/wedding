@@ -68,7 +68,6 @@ header {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  z-index: 2;
 }
 header .header-link {
   display: inline-block;
@@ -114,38 +113,6 @@ header .header-link:hover.gifts {
 }
 header .header-link:hover.rsvp {
   background-color: #dcd9ff;
-}
-#rsvp-form {
-  z-index: 1;
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
-  width: 400px;
-  height: 277px;
-  background-color: #fff;
-  padding: 10px;
-  padding-top: 15px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-  -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.5);
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
-  -webkit-transition: top 500ms;
-  -moz-transition: top 500ms;
-  -o-transition: top 500ms;
-  -ms-transition: top 500ms;
-  transition: top 500ms;
-  position: fixed;
-  left: 51%;
-  top: -277px;
-}
-#rsvp-form.visible {
-  top: 45px;
-}
-#rsvp-form iframe {
-  width: 400px;
-  height: 277px;
 }
 #carousel {
   zoom: 1;

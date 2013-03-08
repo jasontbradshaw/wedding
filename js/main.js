@@ -49,20 +49,4 @@ define(['jquery', 'scroller'], function ($, Scroller) {
   // kick off the scroller
   setInterval(nextImage, 10 * 1000);
   scroller.position(0);
-
-  // set up the RSVP lightbox
-  var $rsvp = $('#rsvp-form');
-  $rsvp.bind('click', function () {
-    $(this).fadeOut();
-  });
-
-  // open the popup when the link is clicked
-  $('.header-link.rsvp').bind('click', function (e) {
-    $rsvp.toggleClass('visible');
-    e.stopPropagation();
-  });
-
-  $(document).bind('click', function () {
-    $rsvp.removeClass('visible');
-  });
 });
