@@ -115,7 +115,7 @@ header .header-link:hover.gifts {
 header .header-link:hover.rsvp {
   background-color: #dcd9ff;
 }
-#carousel {
+.carousel {
   zoom: 1;
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
@@ -124,8 +124,6 @@ header .header-link:hover.rsvp {
   transform: translateZ(0);
   position: relative;
   overflow: hidden;
-  width: 860px;
-  height: 500px;
   border-width: 10px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
@@ -135,34 +133,38 @@ header .header-link:hover.rsvp {
   -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
-#carousel:before,
-#carousel:after {
+.carousel:before,
+.carousel:after {
   content: "";
   display: table;
 }
-#carousel:after {
+.carousel:after {
   clear: both;
 }
-#carousel .scroller {
+.carousel .scroller {
   height: 100%;
-  width: 2580px;
+  width: 10000px;
   -webkit-transition: margin-left 1s;
   -moz-transition: margin-left 1s;
   -o-transition: margin-left 1s;
   -ms-transition: margin-left 1s;
   transition: margin-left 1s;
 }
-#carousel .scroller .carousel-image {
-  width: 880px;
+.carousel .scroller .carousel-image {
+  width: inherit;
   height: 100%;
   float: left;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
 }
-#carousel:hover .thumbnails {
+.carousel:hover .thumbnails {
   opacity: 1;
   -ms-filter: none;
   filter: none;
 }
-.thumbnails {
+.carousel .thumbnails {
   opacity: 0;
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   filter: alpha(opacity=0);
@@ -180,7 +182,7 @@ header .header-link:hover.rsvp {
   background-color: rgba(0,0,0,0.7);
   text-align: center;
 }
-.thumbnails .carousel-image {
+.carousel .thumbnails .carousel-image {
   display: inline-block;
   width: 50px;
   height: 50px;
@@ -205,22 +207,16 @@ header .header-link:hover.rsvp {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   filter: alpha(opacity=60);
 }
-.thumbnails .carousel-image.selected {
+.carousel .thumbnails .carousel-image.selected {
   border-color: #ffbd66;
   opacity: 1;
   -ms-filter: none;
   filter: none;
 }
-.thumbnails .carousel-image:hover {
+.carousel .thumbnails .carousel-image:hover {
   opacity: 1;
   -ms-filter: none;
   filter: none;
-}
-.carousel-image {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  background-position: center;
 }
 .carousel-image.image-0 {
   background-image: url("http://placekitten.com/880/500");
@@ -278,4 +274,8 @@ header .header-link:hover.rsvp {
 }
 #content > section.rsvp h2 {
   background-color: #a89fff;
+}
+#story .carousel {
+  width: 860px;
+  height: 500px;
 }
