@@ -1,52 +1,65 @@
 define(['jquery', 'scroller'], function ($, Scroller) {
-  var $carousel = $('#carousel');
-  var $scroller = $carousel.find('.scroller');
-  var $thumbnails = $carousel.find('.thumbnails');
 
-  var scroller = new Scroller($scroller, 880, 1);
+  var buildCarousel = function (selector, scrollIntervalSeconds) {
+    var $carousel = $(selector);
+    var $scroller = $carousel.find('.scroller');
+    var $thumbnails = $carousel.find('.thumbnails');
 
-  var updatePosition = function () {
-    scroller.position($(this).index());
-  };
+    var selectedClass = 'selected';
+    var scrollAmount = $carousel.innerWidth();
 
-  // fill the image picker with clones of the carousel images
-  $scroller.children().each(function (i) {
-    // clone the current carousel image as a thumbnail
-    var $thumbnail = $(this).clone(false);
-    $thumbnail.click(updatePosition);
-    $thumbnails.append($thumbnail);
-  });
+    var scroller = new Scroller($scroller, scrollAmount, 1);
 
-  // select the currently thumbnail every time we change images
-  scroller.bind('position', function (i) {
-    $thumbnails.children().removeClass('selected')
-        .filter(':eq(' + scroller.position() + ')').addClass('selected');
-  });
+    $scroller.children().each(function (i) {
+      // fill the image picker with clones of the carousel's images
+      var $thumbnail = $(this).clone(false);
+      $thumbnails.append($thumbnail);
+    });
 
-  // change to the next image unless disabled
-  var shouldScroll = true;
-  var nextImage = function () {
-    // only scroll if we should scroll at all
-    if (shouldScroll) {
-      // reset if we were at the end
-      if (scroller.atRightEdge()) {
-        scroller.position(0);
-      } else {
-        // otherwise, go to the next image
-        scroller.right();
+    // select the appropriate thumbnail every time we change images
+    scroller.bind('position', function (i) {
+      $thumbnails.children().removeClass(selectedClass)
+          .filter(':eq(' + scroller.position() + ')').addClass(selectedClass);
+    });
+
+    // switched for scrolling
+    var shouldScroll = true;
+    var startScrolling = function () { shouldScroll = true; };
+    var stopScrolling = function () { shouldScroll = false; };
+
+    // change to the next image unless disabled
+    var nextImage = function () {
+      // only scroll if we should scroll at all
+      if (shouldScroll) {
+        // reset if we were at the end
+        if (scroller.atRightEdge()) {
+          scroller.position(0);
+        } else {
+          // otherwise, go to the next image
+          scroller.right();
+        }
       }
-    }
+    };
+
+    // only scroll when the mouse isn't on the carousel
+    $carousel.bind('mouseenter', stopScrolling);
+    $carousel.bind('mouseleave', startScrolling);
+
+    // change position on thumbnail click
+    $thumbnails.live('click', function (event) {
+      var $target = $(event.target);
+      if ($target.is('.carousel-image')) {
+        scroller.position($target.index());
+      }
+    });
+
+    // kick off the scroller
+    setInterval(nextImage, scrollIntervalSeconds * 1000);
+    scroller.position(0);
+
+    return scroller;
   };
 
-  // switched for scrolling
-  var startScrolling = function () { shouldScroll = true; };
-  var stopScrolling = function () { shouldScroll = false; };
+  buildCarousel('.carousel', 10);
 
-  // only scroll when the mouse isn't on the carousel
-  $carousel.bind('mouseenter', stopScrolling);
-  $carousel.bind('mouseleave', startScrolling);
-
-  // kick off the scroller
-  setInterval(nextImage, 10 * 1000);
-  scroller.position(0);
 });
