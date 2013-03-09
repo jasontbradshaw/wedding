@@ -11,7 +11,7 @@ h6 {
   font-family: 'Amatic SC', 'Arial', serif;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 0.5em;
+  margin-bottom: 30px;
   padding: 0.1em;
   border-top: 10px solid #f0f0f0;
   border-bottom: 10px solid #f0f0f0;
@@ -24,7 +24,7 @@ h1 {
   font-size: 75px;
 }
 h2 {
-  font-size: 50px;
+  font-size: 40px;
 }
 article {
   font-size: 18px;
@@ -38,16 +38,16 @@ article img {
 }
 article a {
   display: inline-block;
-  color: #626c33;
+  color: #869345;
   text-decoration: none;
-  -webkit-transition: color 65ms;
-  -moz-transition: color 65ms;
-  -o-transition: color 65ms;
-  -ms-transition: color 65ms;
-  transition: color 65ms;
+  -webkit-transition: color 60ms;
+  -moz-transition: color 60ms;
+  -o-transition: color 60ms;
+  -ms-transition: color 60ms;
+  transition: color 60ms;
 }
 article a:visited {
-  color: #2d3117;
+  color: #869345;
 }
 article a:active {
   color: #abb868;
@@ -80,10 +80,10 @@ header .header-link {
   display: inline-block;
   margin-left: -0.13333em;
   font-family: 'Amatic SC', 'Arial', serif;
-  font-size: 30px;
+  font-size: 35px;
   color: #000;
   text-decoration: none;
-  line-height: 45px;
+  line-height: 55px;
   padding-left: 1em;
   padding-right: 1em;
   -webkit-transition-property: background-color, color;
@@ -224,16 +224,16 @@ header .header-link:hover.rsvp {
 }
 #content {
   width: 960px;
-  padding-top: 45px;
+  padding-top: 55px;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
 }
 #content > section {
   position: relative;
   overflow: hidden;
-  width: 880px;
-  padding: 40px;
+  width: 900px;
+  padding: 30px;
   background-color: #fff;
   -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.5);
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
@@ -257,7 +257,7 @@ header .header-link:hover.rsvp {
   background-color: #a89fff;
 }
 #story .carousel {
-  width: 860px;
+  width: 880px;
   height: 500px;
 }
 #event article {
