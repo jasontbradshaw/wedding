@@ -11,9 +11,12 @@ define(['jquery', 'scroller'], function ($, Scroller) {
     var scroller = new Scroller($scroller, scrollAmount, 1);
 
     $scroller.children().each(function (i) {
-      // fill the image picker with clones of the carousel's images
+      // add a thumbnail image for this image
       var $thumbnail = $(this).clone(false);
       $thumbnails.append($thumbnail);
+
+      // fit the image to its parent container's width
+      $(this).width($carousel.innerWidth());
     });
 
     // select the appropriate thumbnail every time we change images
@@ -42,11 +45,11 @@ define(['jquery', 'scroller'], function ($, Scroller) {
     };
 
     // only scroll when the mouse isn't on the carousel
-    $carousel.bind('mouseenter', stopScrolling);
-    $carousel.bind('mouseleave', startScrolling);
+    $carousel.on('mouseenter', stopScrolling);
+    $carousel.on('mouseleave', startScrolling);
 
     // change position on thumbnail click
-    $thumbnails.live('click', function (event) {
+    $thumbnails.on('click', function (event) {
       var $target = $(event.target);
       if ($target.is('.carousel-image')) {
         scroller.position($target.index());
@@ -60,6 +63,7 @@ define(['jquery', 'scroller'], function ($, Scroller) {
     return scroller;
   };
 
-  buildCarousel('.carousel', 10);
+  buildCarousel('#story .carousel', 10);
+  buildCarousel('#event .carousel', 10);
 
 });
