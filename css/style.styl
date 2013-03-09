@@ -56,9 +56,25 @@ article
     margin-top 1.7em
 
   img
-    border 1px solid darken($color-border, 40%)
+    border 1px solid darken($color-border, 33%)
+
+  a
+    display inline-block
+    color darken($color-medium, 45%)
+
+    text-decoration none
+    transition color 65ms
+
+    &:visited
+      color darken($color-medium, 75%)
+    &:active
+      color $color-medium
+    &:hover
+      text-decoration underline
 
 aside
+  font-size 1em
+
   margin-top 0.5em
   margin-bottom @margin-top
   margin-left 1em
@@ -175,7 +191,7 @@ header
       cursor pointer
 
       margin 1.5%
-      margin-top @margin * 1.2
+      margin-top @margin * 1.3
       margin-bottom @margin-top
 
       border 2px solid white
