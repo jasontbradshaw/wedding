@@ -223,7 +223,7 @@ header .header-link:hover.rsvp {
   filter: none;
 }
 #content {
-  width: 720px;
+  width: 960px;
   padding-top: 55px;
   margin-left: auto;
   margin-right: auto;
@@ -232,7 +232,7 @@ header .header-link:hover.rsvp {
 #content > section {
   position: relative;
   overflow: hidden;
-  width: 660px;
+  width: 900px;
   padding: 30px;
   background-color: #fff;
   -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.5);
@@ -257,8 +257,8 @@ header .header-link:hover.rsvp {
   background-color: #a89fff;
 }
 #story .carousel {
-  width: 640px;
-  height: 404.4943820224719px;
+  width: 880px;
+  height: 500px;
 }
 #event article {
   float: left;
@@ -267,10 +267,10 @@ header .header-link:hover.rsvp {
 #event .carousel {
   float: right;
   width: 55%;
-  height: 222.47191011235958px;
+  height: 350px;
   margin-right: -15px;
 }
 #event .carousel .thumbnails .carousel-image {
-  width: 24px;
-  height: 24px;
+  width: 34px;
+  height: 34px;
 }
