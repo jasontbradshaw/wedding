@@ -34,9 +34,29 @@ article p ~ p {
   margin-top: 1.7em;
 }
 article img {
-  border: 1px solid #909090;
+  border: 1px solid #a1a1a1;
+}
+article a {
+  display: inline-block;
+  color: #626c33;
+  text-decoration: none;
+  -webkit-transition: color 65ms;
+  -moz-transition: color 65ms;
+  -o-transition: color 65ms;
+  -ms-transition: color 65ms;
+  transition: color 65ms;
+}
+article a:visited {
+  color: #2d3117;
+}
+article a:active {
+  color: #abb868;
+}
+article a:hover {
+  text-decoration: underline;
 }
 aside {
+  font-size: 1em;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   margin-left: 1em;
@@ -174,8 +194,8 @@ header .header-link:hover.rsvp {
   background-color: #fff;
   cursor: pointer;
   margin: 1.5%;
-  margin-top: 1.7999999999999998%;
-  margin-bottom: 1.7999999999999998%;
+  margin-top: 1.9500000000000002%;
+  margin-bottom: 1.9500000000000002%;
   border: 2px solid #fff;
   -webkit-transition-property: border-color, opacity;
   -moz-transition-property: border-color, opacity;
