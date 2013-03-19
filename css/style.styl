@@ -203,7 +203,6 @@ header
       opacity 0.6
 
       &.selected
-        border-color $color-story
         opacity 1
 
       &:hover
@@ -250,6 +249,9 @@ header
     width $size-content-width - (2 * ($size-content-padding + 10px))
     height (@width / $ratio-carousel-height)
 
+    .carousel-image.selected
+      border-color $color-story
+
 #event
   article
     float left
@@ -265,5 +267,8 @@ header
       .carousel-image
         width 34px
         height @width
+
+        &.selected
+          border-color $color-event
 
     margin-right -15px

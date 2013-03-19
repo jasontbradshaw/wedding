@@ -212,7 +212,6 @@ header .header-link:hover.rsvp {
   filter: alpha(opacity=60);
 }
 .carousel .thumbnails .carousel-image.selected {
-  border-color: #ffbd66;
   opacity: 1;
   -ms-filter: none;
   filter: none;
@@ -260,6 +259,9 @@ header .header-link:hover.rsvp {
   width: 880px;
   height: 550px;
 }
+#story .carousel .carousel-image.selected {
+  border-color: #ffbd66;
+}
 #event article {
   float: left;
   width: 40%;
@@ -273,4 +275,7 @@ header .header-link:hover.rsvp {
 #event .carousel .thumbnails .carousel-image {
   width: 34px;
   height: 34px;
+}
+#event .carousel .thumbnails .carousel-image.selected {
+  border-color: #f99;
 }
