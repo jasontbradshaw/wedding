@@ -17,7 +17,7 @@ $color-rsvp = #a89fff
 
 $color-border = #f0f0f0
 
-$size-header-height = 55px
+$size-nav-height = 55px
 $size-content-padding = 30px
 $size-content-width = 960px
 
@@ -54,11 +54,11 @@ article
   font-size 18px
   line-height 1.3em
 
-  p ~ p
-    margin-top 1.7em
 
-  img
-    border 1px solid darken($color-border, 33%)
+  p
+    text-align justify
+    &~ p;
+      margin-top 1.7em
 
   a
     display inline-block
@@ -74,15 +74,16 @@ article
     &:hover
       text-decoration underline
 
-aside
+address
   font-size 1em
+  font-style normal
 
   margin-top 0.5em
   margin-bottom @margin-top
   margin-left 1em
 
 // navigation
-header
+nav
   position fixed
   top 0
   right 0
@@ -96,7 +97,7 @@ header
 
   z-index 1
 
-  .header-link
+  .nav-link
     display inline-block
 
     // fix spacing caused by the links being on different lines
@@ -107,7 +108,7 @@ header
     color black
     text-decoration none
 
-    line-height $size-header-height
+    line-height $size-nav-height
     padding-left 1em
     padding-right @padding-left
 
@@ -211,7 +212,7 @@ header
 // information
 #content
   width $size-content-width
-  padding-top $size-header-height
+  padding-top $size-nav-height
 
   margin-left auto
   margin-right auto
@@ -231,7 +232,7 @@ header
 
     margin-top 40px
 
-    // color headers differently
+    // color navs differently
     &.story h1
       background-color $color-story
     &.people h2
@@ -251,6 +252,9 @@ header
 
     .carousel-image.selected
       border-color $color-story
+
+.map
+  border 1px solid darken($color-border, 33%)
 
 #event
   article
@@ -272,3 +276,29 @@ header
           border-color $color-event
 
     margin-right -15px
+
+.registry-button
+  // border 1px solid #020202
+  transition opacity 250ms
+
+  img
+    display block
+    width 100%
+    height @width
+
+  &:hover
+    opacity 0.6
+
+#gifts
+  article
+    width 47.5%
+    float left
+
+    &~ article
+      margin-left 5%
+
+  figure
+    text-align center
+
+    .registry-button
+      width 49%
