@@ -30,11 +30,11 @@ article {
   font-size: 18px;
   line-height: 1.3em;
 }
-article p ~ p {
-  margin-top: 1.7em;
+article p {
+  text-align: justify;
 }
-article img {
-  border: 1px solid #a1a1a1;
+article p~ p {
+  margin-top: 1.7em;
 }
 article a {
   display: inline-block;
@@ -55,13 +55,14 @@ article a:active {
 article a:hover {
   text-decoration: underline;
 }
-aside {
+address {
   font-size: 1em;
+  font-style: normal;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   margin-left: 1em;
 }
-header {
+nav {
   position: fixed;
   top: 0;
   right: 0;
@@ -76,7 +77,7 @@ header {
   user-select: none;
   z-index: 1;
 }
-header .header-link {
+nav .nav-link {
   display: inline-block;
   margin-left: -0.13333em;
   font-family: 'Amatic SC', 'Arial', serif;
@@ -97,25 +98,25 @@ header .header-link {
   -ms-transition-duration: 150ms;
   transition-duration: 150ms;
 }
-header .header-link:hover,
-header .header-link:active,
-header .header-link:visited {
+nav .nav-link:hover,
+nav .nav-link:active,
+nav .nav-link:visited {
   color: #000;
   text-decoration: none;
 }
-header .header-link:hover.story {
+nav .nav-link:hover.story {
   background-color: #ffe5c2;
 }
-header .header-link:hover.people {
+nav .nav-link:hover.people {
   background-color: #fffcde;
 }
-header .header-link:hover.event {
+nav .nav-link:hover.event {
   background-color: #ffd6d6;
 }
-header .header-link:hover.gifts {
+nav .nav-link:hover.gifts {
   background-color: #dde3c3;
 }
-header .header-link:hover.rsvp {
+nav .nav-link:hover.rsvp {
   background-color: #dcd9ff;
 }
 .carousel {
@@ -262,6 +263,9 @@ header .header-link:hover.rsvp {
 #story .carousel .carousel-image.selected {
   border-color: #ffbd66;
 }
+.map {
+  border: 1px solid #a1a1a1;
+}
 #event article {
   float: left;
   width: 40%;
@@ -278,4 +282,34 @@ header .header-link:hover.rsvp {
 }
 #event .carousel .thumbnails .carousel-image.selected {
   border-color: #f99;
+}
+.registry-button {
+  -webkit-transition: opacity 250ms;
+  -moz-transition: opacity 250ms;
+  -o-transition: opacity 250ms;
+  -ms-transition: opacity 250ms;
+  transition: opacity 250ms;
+}
+.registry-button img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.registry-button:hover {
+  opacity: 0.6;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  filter: alpha(opacity=60);
+}
+#gifts article {
+  width: 47.5%;
+  float: left;
+}
+#gifts article~ article {
+  margin-left: 5%;
+}
+#gifts figure {
+  text-align: center;
+}
+#gifts figure .registry-button {
+  width: 49%;
 }
