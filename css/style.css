@@ -258,7 +258,7 @@ header .header-link:hover.rsvp {
 }
 #story .carousel {
   width: 880px;
-  height: 500px;
+  height: 550px;
 }
 #event article {
   float: left;
@@ -267,7 +267,7 @@ header .header-link:hover.rsvp {
 #event .carousel {
   float: right;
   width: 55%;
-  height: 350px;
+  height: 330px;
   margin-right: -15px;
 }
 #event .carousel .thumbnails .carousel-image {
