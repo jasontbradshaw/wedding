@@ -35,6 +35,15 @@ article p {
 article p~ p {
   margin-top: 1.7em;
 }
+article sup {
+  font-size: 0.75em;
+  line-height: 1em;
+  vertical-align: 0.35em;
+}
+article sub {
+  font-size: 0.6em;
+  line-height: 1em;
+}
 article a {
   display: inline-block;
   color: #869345;
@@ -59,7 +68,7 @@ address {
   font-style: normal;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
-  margin-left: 1em;
+  text-align: center;
 }
 nav {
   position: fixed;
