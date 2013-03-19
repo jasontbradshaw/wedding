@@ -21,6 +21,8 @@ $size-header-height = 55px
 $size-content-padding = 30px
 $size-content-width = 960px
 
+$ratio-carousel-height = 1.6
+
 body
   background-image url(../img/linen.jpg)
   font-family $font-normal
@@ -246,7 +248,7 @@ header
   // pictures of the bride and groom
   .carousel
     width $size-content-width - (2 * ($size-content-padding + 10px))
-    height 500px
+    height (@width / $ratio-carousel-height)
 
 #event
   article
@@ -257,7 +259,7 @@ header
   .carousel
     float right
     width 55%
-    height 350px
+    height (($size-content-width * (@width / 100)) / $ratio-carousel-height)px
 
     .thumbnails
       .carousel-image
