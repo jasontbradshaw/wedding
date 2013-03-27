@@ -270,6 +270,108 @@ nav .nav-link:hover.rsvp {
 #story .carousel .carousel-image.selected {
   border-color: #ffbd66;
 }
+.person-picker {
+  zoom: 1;
+}
+.person-picker:before,
+.person-picker:after {
+  content: "";
+  display: table;
+}
+.person-picker:after {
+  clear: both;
+}
+.person-picker> section {
+  float: left;
+}
+.person-picker .person {
+  background-color: #f0f0f0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+.person-picker .selector .person {
+  width: 60px;
+  height: 60px;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  border: 3px solid #f0f0f0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition-property: border-color, opacity;
+  -moz-transition-property: border-color, opacity;
+  -o-transition-property: border-color, opacity;
+  -ms-transition-property: border-color, opacity;
+  transition-property: border-color, opacity;
+  -webkit-transition-duration: 300ms;
+  -moz-transition-duration: 300ms;
+  -o-transition-duration: 300ms;
+  -ms-transition-duration: 300ms;
+  transition-duration: 300ms;
+  opacity: 0.6;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  filter: alpha(opacity=60);
+}
+.person-picker .selector .person~ .person {
+  margin-top: 5px;
+}
+.person-picker .selector .person:hover {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+.person-picker .selector .person.selected {
+  border-color: #fff8ac;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+.person-picker .display .card {
+  width: 334px;
+  height: 334px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #f0f0f0;
+  background-color: #f0f0f0;
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.person-picker .display .card .person {
+  width: 100%;
+  height: 100%;
+}
+.person-picker article {
+  width: 354px;
+  margin-top: 1em;
+}
+#people {
+  zoom: 1;
+}
+#people:before,
+#people:after {
+  content: "";
+  display: table;
+}
+#people:after {
+  clear: both;
+}
+#people .person-picker {
+  float: left;
+}
+#people .person-picker .selector {
+  margin-left: 6px;
+  margin-right: 6px;
+}
+#people .person-picker.groomsmen .display {
+  margin-left: 15px;
+}
+#people .person-picker.bridesmaids .display {
+  margin-right: 15px;
+}
 .map {
   border: 1px solid #a1a1a1;
 }

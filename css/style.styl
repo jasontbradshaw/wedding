@@ -262,6 +262,77 @@ nav
     .carousel-image.selected
       border-color $color-story
 
+.person-picker
+  clearfix()
+
+  &> section
+    float left
+
+  .person
+    background-color $color-border
+    background-size cover
+    background-position center
+
+  .selector
+    .person
+      width 60px
+      height @width
+      border-radius 100%
+      border 3px solid $color-border
+
+      cursor pointer
+      user-select none
+
+      transition-property border-color, opacity
+      transition-duration 300ms
+      opacity 0.6
+
+      &~ .person
+        margin-top 5px
+
+      &:hover
+        opacity 1.0
+
+      &.selected
+        border-color $color-people
+        opacity 1.0
+
+  .display
+    .card
+      width 334px
+      height @width
+
+      border-width 10px
+      border-style solid
+      border-color $color-border
+
+      background-color @border-color
+
+      box-shadow 0 0 10px rgba(black, 0.5)
+
+      .person
+        width 100%
+        height @width
+
+  article
+    width 354px
+    margin-top 1em
+
+#people
+  clearfix()
+
+  .person-picker
+    float left
+
+    .selector
+      margin-left 6px
+      margin-right @margin-left
+
+    &.groomsmen .display
+      margin-left 15px
+    &.bridesmaids .display
+      margin-right 15px
+
 .map
   border 1px solid darken($color-border, 33%)
 

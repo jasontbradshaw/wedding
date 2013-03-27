@@ -61,7 +61,41 @@ define(['jquery', 'scroller'], function ($, Scroller) {
     return scroller;
   };
 
-  buildCarousel('#story .carousel', 10);
-  buildCarousel('#event .carousel', 10);
+  var buildPersonPicker = function (selector) {
+    var $picker = $(selector);
+    var $selector = $picker.find('.selector');
+    var $card = $picker.find('.display .card');
+    var $text = $picker.find('.display article p');
+
+    var selectedClass = 'selected';
+
+    // update the selected person
+    var selectPerson = function ($person) {
+      // update selected person
+      $card.empty().append($person.clone(false));
+      $text.text($person.attr('data-text'));
+
+      // update the selected class
+      $person.addClass(selectedClass).siblings().removeClass(selectedClass);
+    };
+
+    $selector.bind('click', function (event) {
+      var $target = $(event.target);
+      console.log('click');
+      if ($target.is('.person')) {
+        selectPerson($target);
+      }
+    });
+
+    // select the first person initially
+    selectPerson($selector.children().first());
+  };
+
+  var scrollTimeSeconds = 10;
+  buildCarousel('#story .carousel', scrollTimeSeconds);
+  buildCarousel('#event .carousel', scrollTimeSeconds);
+
+  buildPersonPicker('#people .person-picker.bridesmaids');
+  buildPersonPicker('#people .person-picker.groomsmen');
 
 });
