@@ -27,8 +27,6 @@ define(['jquery', 'scroller'], function ($, Scroller) {
 
     // switched for scrolling
     var shouldScroll = true;
-    var startScrolling = function () { shouldScroll = true; };
-    var stopScrolling = function () { shouldScroll = false; };
 
     // change to the next image unless disabled
     var nextImage = function () {
@@ -45,8 +43,8 @@ define(['jquery', 'scroller'], function ($, Scroller) {
     };
 
     // only scroll when the mouse isn't on the carousel
-    $carousel.on('mouseenter', stopScrolling);
-    $carousel.on('mouseleave', startScrolling);
+    $carousel.on('mouseenter', function () { shouldScroll = false; });
+    $carousel.on('mouseleave', function () { shouldScroll = true; });
 
     // change position on thumbnail click
     $thumbnails.on('click', function (event) {
