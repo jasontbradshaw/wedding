@@ -33,7 +33,7 @@ article p {
   text-align: justify;
 }
 article p~ p {
-  margin-top: 1.7em;
+  margin-top: 1.3em;
 }
 article sup {
   font-size: 0.75em;
@@ -142,6 +142,7 @@ nav .nav-link:hover.rsvp {
   background-color: #f0f0f0;
   -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  margin-bottom: 1.5em;
 }
 .carousel:before,
 .carousel:after {
